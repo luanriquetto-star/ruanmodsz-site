@@ -1,1 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RUAN MODS - Estoque Limitado</title>
 
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+body{background:#050505;color:#fff}
+
+header{
+  padding:20px;
+  background:linear-gradient(90deg,#000,#0a0a0a);
+  border-bottom:1px solid #222;
+}
+header h1{
+  color:#00ff88;
+  text-align:center;
+  font-size:26px;
+  letter-spacing:2px;
+}
+
+.hero{
+  text-align:center;
+  padding:30px 20px;
+}
+.hero h2{font-size:26px}
+.hero span{color:#ff3c3c}
+.hero p{opacity:.8;margin-top:10px}
+
+.produtos{
+  padding:20px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:20px;
+}
+
+.card{
+  background:linear-gradient(180deg,#0c0c0c,#050505);
+  border-radius:16px;
+  padding:18px;
+  box-shadow:0 0 20px rgba(0,0,0,.6);
+  text-align:center;
+}
+
+.card img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  border-radius:12px;
+  margin-bottom:12px;
+}
+
+.tag{
+  display:inline-block;
+  padding:6px 14px;
+  border-radius:20px;
+  font-size:12px;
+  margin-bottom:10px;
+  background:#ff3c3c;
+}
+
+.card h3{margin:10px 0}
+
+.btn-whatsapp{
+  display:block;
+  margin-top:12px;
+  padding:14px;
+  background:#25D366;
+  color:#fff;
+  text-decoration:none;
+  font-weight:bold;
+  border-radius:12px;
+}
+
+footer{
+  text-align:center;
+  padding:25px;
+  opacity:.6;
+  font-size:14px;
+}
+
+/* WhatsApp flutuante */
+.whatsapp-float{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  width:60px;
+  height:60px;
+  background:#25D366;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 0 20px #25D366;
+  z-index:9999;
+}
+.whatsapp-float img{width:35px}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>🔥 RUAN MODS 🔥</h1>
+</header>
+
+<section class="hero">
+  <h2>ESTOQUE <span>LIMITADO</span></h2>
+  <p>Itens raros • Atendimento imediato via WhatsApp</p>
+</section>
+
+<section class="produtos">
+
+  <div class="card">
+    <span class="tag">ESTOQUE LIMITADO</span>
+    <img src="https://i.ibb.co/Tx7YysG4/IMG-20260205-WA0115.jpg" alt="Burgerine Bearini">
+    <h3>Burgerine Bearini 🍔🐻</h3>
+    <a class="btn-whatsapp"
+       href="https://wa.me/5516993938821?text=Olá! Tenho interesse no Burgerine Bearini."
+       target="_blank">CHAMAR NO WHATSAPP</a>
+  </div>
+
+  <div class="card">
+    <span class="tag">ESTOQUE LIMITADO</span>
+    <img src="https://i.ibb.co/XZPkpCf7/IMG-20260205-WA0116.jpg" alt="Grappelino D’oro">
+    <h3>Grappelino D’oro 🍇🛸</h3>
+    <a class="btn-whatsapp"
+       href="https://wa.me/5516993938821?text=Olá! Tenho interesse no Grappelino D’oro."
+       target="_blank">CHAMAR NO WHATSAPP</a>
+  </div>
+
+  <div class="card">
+    <span class="tag">ESTOQUE LIMITADO</span>
+    <img src="https://i.ibb.co/21q3fz9y/IMG-20260205-WA0117.jpg" alt="Martino Gravitino">
+    <h3>Martino Gravitino 🛸🧠</h3>
+    <a class="btn-whatsapp"
+       href="https://wa.me/5516993938821?text=Olá! Tenho interesse no Martino Gravitino."
+       target="_blank">CHAMAR NO WHATSAPP</a>
+  </div>
+
+  <div class="card">
+    <span class="tag">ESTOQUE LIMITADO</span>
+    <img src="https://i.ibb.co/Wpss0XWF/IMG-20260205-WA0118.jpg" alt="Bulbito Bandido Traktorito">
+    <h3>Bulbito Bandido Traktorito 🚜🌱</h3>
+    <a class="btn-whatsapp"
+       href="https://wa.me/5516993938821?text=Olá! Tenho interesse no Bulbito Bandido Traktorito."
+       target="_blank">CHAMAR NO WHATSAPP</a>
+  </div>
+
+</section>
+
+<footer>
+© RUAN MODS • Atendimento via WhatsApp
+</footer>
+
+<a href="https://wa.me/5516993938821" class="whatsapp-float" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+</a>
+
+</body>
+</html>
