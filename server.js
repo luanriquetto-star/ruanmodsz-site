@@ -1,19 +1,24 @@
 const express = require("express");
-const cors = require("cors");
-const path = require("path");
-
 const app = express();
-app.use(cors());
+const PORT = process.env.PORT || 3000;
+
 app.use(express.json());
 
-// servir a pasta public
-app.use(express.static(path.join(__dirname, "public")));
-
+// rota principal
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "index.html"));
+  res.send("API RUAN MODSZ ONLINE 🚀");
 });
 
-const PORT = process.env.PORT || 3000;
+// 🔥 ROTA DO STATUS (ESSA É A QUE FALTAVA)
+app.get("/status", (req, res) => {
+  res.json({
+    status: "online",
+    api: "RUAN MODSZ",
+    servidor: "OK",
+    timestamp: new Date()
+  });
+});
+
 app.listen(PORT, () => {
   console.log("Servidor rodando na porta " + PORT);
 });
