@@ -2,30 +2,145 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>RUAN MODSZ STORE</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RUAN STORE</title>
 
 <style>
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family: Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
+/* ===== GERAL ===== */
 body{
   background:#0b0014;
-  padding:20px;
   color:#fff;
 }
 
-h1{
+/* ===== HEADER / ENTRADA ===== */
+.header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 20px;
+}
+
+.logo{
+  font-size:22px;
+  font-weight:900;
+}
+
+.logo span{
+  color:#f5c400;
+}
+
+.menu{
+  width:44px;
+  height:44px;
+  border-radius:12px;
+  background:linear-gradient(180deg,#2a2a2a,#111);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#f5c400;
+  font-size:22px;
+}
+
+.hero{
+  padding:35px 20px 45px;
+  text-align:center;
+}
+
+.badge{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 18px;
+  border-radius:30px;
+  background:rgba(245,196,0,0.15);
+  color:#f5c400;
+  font-weight:bold;
+  margin-bottom:18px;
+}
+
+.badge::before{
+  content:"●";
+  color:#1fd35f;
+}
+
+.hero h2{
+  font-size:14px;
+  letter-spacing:2px;
+  color:#f5c400;
+  margin-bottom:8px;
+}
+
+.hero h1{
+  font-size:32px;
+  line-height:1.2;
+  margin-bottom:16px;
+}
+
+.hero h1 .yellow{
+  color:#f5c400;
+}
+
+.hero p{
+  font-size:15px;
+  color:#bdbdbd;
+  margin-bottom:28px;
+  line-height:1.5;
+}
+
+.hero-btn{
+  width:100%;
+  max-width:340px;
+  margin:10px auto;
+  padding:17px;
+  border-radius:14px;
+  font-size:16px;
+  font-weight:bold;
+  text-decoration:none;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+}
+
+.btn-produtos{
+  background:#f5c400;
+  color:#000;
+}
+
+.btn-whats{
+  background:#1fd35f;
+  color:#fff;
+}
+
+.infos{
+  display:flex;
+  justify-content:center;
+  gap:22px;
+  margin-top:26px;
+  font-size:13px;
+  color:#cfcfcf;
+  flex-wrap:wrap;
+}
+
+/* ===== PEDIDOS ===== */
+#produtos{
+  padding:20px;
+}
+
+#produtos h1{
   text-align:center;
   color:#c77dff;
   margin-bottom:10px;
 }
 
-p{
+#produtos p{
   text-align:center;
   color:#d8c7ff;
   margin-bottom:25px;
@@ -63,7 +178,7 @@ p{
   font-weight:bold;
 }
 
-.btn{
+.card .btn{
   display:block;
   margin-top:10px;
   background:#1fd35f;
@@ -74,73 +189,122 @@ p{
   font-weight:bold;
 }
 
-.btn:hover{
-  background:#17b84f;
-}
-
 .footer{
-  margin-top:30px;
+  margin:30px 0 15px;
   text-align:center;
   font-size:12px;
   color:#b9a6ff;
+}
+
+/* ===== WHATSAPP FLOAT ===== */
+.whatsapp-float{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  width:56px;
+  height:56px;
+  background:#1fd35f;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:26px;
+  color:#fff;
+  text-decoration:none;
+  box-shadow:0 0 20px rgba(31,211,95,0.6);
 }
 </style>
 </head>
 
 <body>
 
-<h1>RUAN MODSZ STORE</h1>
-<p>1k = R$0,50 • Entrega rápida • Suporte via WhatsApp</p>
-
-<div class="grid">
-
-  <div class="card">
-    <img src="https://i.imgur.com/4M7IWwP.png">
-    <h3>5k</h3>
-    <span>R$ 2,50</span>
-    <a class="btn" href="https://wa.me/5516993938821?text=Quero%205k">Comprar</a>
-  </div>
-
-  <div class="card">
-    <img src="https://i.imgur.com/4M7IWwP.png">
-    <h3>10k</h3>
-    <span>R$ 5,00</span>
-    <a class="btn" href="https://wa.me/5516993938821?text=Quero%2010k">Comprar</a>
-  </div>
-
-  <div class="card">
-    <img src="https://i.imgur.com/4M7IWwP.png">
-    <h3>20k</h3>
-    <span>R$ 10,00</span>
-    <a class="btn" href="https://wa.me/5516993938821?text=Quero%2020k">Comprar</a>
-  </div>
-
-  <div class="card">
-    <img src="https://i.imgur.com/4M7IWwP.png">
-    <h3>50k</h3>
-    <span>R$ 25,00</span>
-    <a class="btn" href="https://wa.me/5516993938821?text=Quero%2050k">Comprar</a>
-  </div>
-
-  <div class="card">
-    <img src="https://i.imgur.com/4M7IWwP.png">
-    <h3>100k</h3>
-    <span>R$ 50,00</span>
-    <a class="btn" href="https://wa.me/5516993938821?text=Quero%20100k">Comprar</a>
-  </div>
-
-  <div class="card">
-    <img src="https://i.imgur.com/4M7IWwP.png">
-    <h3>240k</h3>
-    <span>R$ 120,00</span>
-    <a class="btn" href="https://wa.me/5516993938821?text=Quero%20240k">Comprar</a>
-  </div>
-
+<!-- ===== ENTRADA ===== -->
+<div class="header">
+  <div class="logo"><span>RUAN</span> STORE</div>
+  <div class="menu">☰</div>
 </div>
 
-<div class="footer">
-© RUAN MODSZ — Loja Oficial
-</div>
+<section class="hero">
+  <div class="badge">LOJA ONLINE 24H</div>
+
+  <h2>RIO RISE PERFUMES</h2>
+
+  <h1>
+    Perfumes Originais,<br>
+    <span class="yellow">Importados</span> e com<br>
+    <span class="yellow">Entrega Garantida</span>
+  </h1>
+
+  <p>
+    Compra simples, envio rápido e suporte direto no WhatsApp.
+    A loja ideal para quem busca perfumes de qualidade.
+  </p>
+
+  <a href="#produtos" class="hero-btn btn-produtos">🛍️ VER PRODUTOS</a>
+  <a href="https://wa.me/5516993938821" class="hero-btn btn-whats">💬 FALAR CONOSCO</a>
+
+  <div class="infos">
+    <div>🛡️ Compra Segura</div>
+    <div>🚚 Envio Rápido</div>
+    <div>⭐ Clientes Satisfeitos</div>
+  </div>
+</section>
+
+<!-- ===== PEDIDOS ===== -->
+<section id="produtos">
+  <h1>RUAN MODSZ STORE</h1>
+  <p>1k = R$0,50 • Entrega rápida • Suporte via WhatsApp</p>
+
+  <div class="grid">
+    <div class="card">
+      <img src="https://i.imgur.com/4M7IWwP.png">
+      <h3>5k</h3>
+      <span>R$ 2,50</span>
+      <a class="btn" href="https://wa.me/5516993938821?text=Quero%205k">Comprar</a>
+    </div>
+
+    <div class="card">
+      <img src="https://i.imgur.com/4M7IWwP.png">
+      <h3>10k</h3>
+      <span>R$ 5,00</span>
+      <a class="btn" href="https://wa.me/5516993938821?text=Quero%2010k">Comprar</a>
+    </div>
+
+    <div class="card">
+      <img src="https://i.imgur.com/4M7IWwP.png">
+      <h3>20k</h3>
+      <span>R$ 10,00</span>
+      <a class="btn" href="https://wa.me/5516993938821?text=Quero%2020k">Comprar</a>
+    </div>
+
+    <div class="card">
+      <img src="https://i.imgur.com/4M7IWwP.png">
+      <h3>50k</h3>
+      <span>R$ 25,00</span>
+      <a class="btn" href="https://wa.me/5516993938821?text=Quero%2050k">Comprar</a>
+    </div>
+
+    <div class="card">
+      <img src="https://i.imgur.com/4M7IWwP.png">
+      <h3>100k</h3>
+      <span>R$ 50,00</span>
+      <a class="btn" href="https://wa.me/5516993938821?text=Quero%20100k">Comprar</a>
+    </div>
+
+    <div class="card">
+      <img src="https://i.imgur.com/4M7IWwP.png">
+      <h3>240k</h3>
+      <span>R$ 120,00</span>
+      <a class="btn" href="https://wa.me/5516993938821?text=Quero%20240k">Comprar</a>
+    </div>
+  </div>
+
+  <div class="footer">
+    © RUAN STORE — Loja Oficial
+  </div>
+</section>
+
+<a href="https://wa.me/5516993938821" class="whatsapp-float">💬</a>
 
 </body>
 </html>
