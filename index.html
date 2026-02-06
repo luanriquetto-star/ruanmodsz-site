@@ -1,179 +1,257 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RUAN MODSZ | Loja Oficial</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RUAN MODSZ | Loja Oficial</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,Helvetica,sans-serif;
+}
 
-    body {
-      background: #0a0014;
-      color: #fff;
-    }
+body{
+  background:#07000f;
+  color:#fff;
+}
 
-    header {
-      background: linear-gradient(135deg, #3a007a, #000);
-      padding: 40px 20px;
-      text-align: center;
-      box-shadow: 0 0 20px #7a00ff;
-    }
+/* ===== HEADER / ENTRADA ===== */
+.hero{
+  min-height:100vh;
+  background:
+    radial-gradient(circle at top, rgba(140,0,255,0.25), transparent 60%),
+    linear-gradient(180deg,#000,#07000f);
+  padding:30px 20px;
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
 
-    header h1 {
-      font-size: 36px;
-      color: #b066ff;
-      text-shadow: 0 0 15px #7a00ff;
-    }
+.logo{
+  font-size:26px;
+  font-weight:bold;
+  color:#b066ff;
+  margin-bottom:20px;
+}
 
-    header p {
-      margin-top: 10px;
-      color: #ddd;
-    }
+.badge{
+  display:inline-block;
+  background:rgba(176,102,255,0.15);
+  border:1px solid #7a00ff;
+  color:#cfa8ff;
+  padding:8px 16px;
+  border-radius:30px;
+  margin-bottom:20px;
+  font-size:14px;
+}
 
-    .section {
-      padding: 30px 15px;
-    }
+.hero h1{
+  font-size:36px;
+  line-height:1.2;
+  margin-bottom:15px;
+}
 
-    .section h2 {
-      text-align: center;
-      color: #b066ff;
-      margin-bottom: 20px;
-      text-shadow: 0 0 10px #7a00ff;
-    }
+.hero h1 span{
+  color:#b066ff;
+}
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-    }
+.hero p{
+  opacity:.85;
+  max-width:480px;
+  margin:0 auto 25px;
+}
 
-    .card {
-      background: #12001f;
-      border: 1px solid #6a00ff;
-      border-radius: 15px;
-      padding: 15px;
-      text-align: center;
-      box-shadow: 0 0 15px rgba(122,0,255,0.4);
-    }
+.btn{
+  width:100%;
+  max-width:420px;
+  margin:8px auto;
+  padding:16px;
+  border-radius:14px;
+  font-size:16px;
+  font-weight:bold;
+  border:none;
+  cursor:pointer;
+}
 
-    .card img {
-      width: 100%;
-      border-radius: 10px;
-      margin-bottom: 10px;
-    }
+.btn-produtos{
+  background:#7a00ff;
+  color:#fff;
+  box-shadow:0 0 15px #7a00ff;
+}
 
-    .card h3 {
-      color: #fff;
-      margin-bottom: 8px;
-    }
+.btn-whats{
+  background:#25D366;
+  color:#fff;
+}
 
-    .btn {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 18px;
-      background: #7a00ff;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 25px;
-      box-shadow: 0 0 10px #7a00ff;
-    }
+.features{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  margin-top:25px;
+  font-size:14px;
+  opacity:.85;
+}
 
-    .btn:hover {
-      background: #9d4dff;
-    }
+/* ===== SEÇÕES ===== */
+.section{
+  padding:40px 20px;
+}
 
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25d366;
-      color: #fff;
-      padding: 14px 18px;
-      border-radius: 50px;
-      font-weight: bold;
-      text-decoration: none;
-      box-shadow: 0 0 15px #25d366;
-    }
+.section h2{
+  text-align:center;
+  color:#b066ff;
+  margin-bottom:25px;
+  text-shadow:0 0 10px #7a00ff;
+}
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      color: #aaa;
-      font-size: 14px;
-    }
-  </style>
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+
+.card{
+  background:#12001f;
+  border:1px solid #6a00ff;
+  border-radius:16px;
+  padding:15px;
+  text-align:center;
+  box-shadow:0 0 15px rgba(122,0,255,.4);
+}
+
+.card img{
+  width:100%;
+  border-radius:12px;
+  margin-bottom:10px;
+}
+
+.card h3{
+  margin:10px 0;
+}
+
+.card .btn{
+  max-width:none;
+}
+
+/* ===== WHATSAPP FLOAT ===== */
+.whatsapp-float{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  padding:15px 18px;
+  border-radius:50px;
+  color:#fff;
+  font-weight:bold;
+  text-decoration:none;
+  box-shadow:0 0 15px #25D366;
+}
+
+/* ===== FOOTER ===== */
+footer{
+  text-align:center;
+  padding:25px;
+  font-size:14px;
+  opacity:.6;
+}
+</style>
 </head>
 
 <body>
 
-<header>
-  <h1>RUAN MODSZ</h1>
-  <p>🔥 Estoque Limitado • Brainrots Divinos • Scripts • Contas 🔥</p>
-</header>
+<!-- ===== ENTRADA ===== -->
+<section class="hero">
+  <div class="logo">RUAN MODSZ</div>
 
-<!-- BRAINROTS -->
-<section class="section">
+  <div class="badge">🟢 LOJA ONLINE 24H</div>
+
+  <h1>FUJA DO TSUNAMI<br>
+    <span>Itens Rápidos, Confiáveis</span><br>
+    e com Entrega Garantida
+  </h1>
+
+  <p>
+    Compra simples, entrega rápida e suporte direto no WhatsApp.
+    A loja mais confiável para seus itens no Fuja do Tsunami!
+  </p>
+
+  <button class="btn btn-produtos" onclick="document.getElementById('produtos').scrollIntoView({behavior:'smooth'})">
+    ⚡ VER PRODUTOS
+  </button>
+
+  <a href="https://wa.me/5599999999999" target="_blank">
+    <button class="btn btn-whats">💬 FALAR CONOSCO</button>
+  </a>
+
+  <div class="features">
+    <div>🔒 Compra Segura</div>
+    <div>⚡ Entrega Rápida</div>
+    <div>🔥 +20 Clientes</div>
+  </div>
+</section>
+
+<!-- ===== PRODUTOS ===== -->
+<section class="section" id="produtos">
   <h2>🧠 Brainrots Divinos</h2>
 
   <div class="grid">
     <div class="card">
       <img src="https://i.ibb.co/Tx7YysG4/IMG-20260205-WA0115.jpg">
       <h3>Burgerine Bearini</h3>
+      <a class="btn btn-whats" href="https://wa.me/5599999999999">CHAMAR NO WHATSAPP</a>
     </div>
 
     <div class="card">
       <img src="https://i.ibb.co/XZPkpCf7/IMG-20260205-WA0116.jpg">
       <h3>Grappelino D’oro</h3>
+      <a class="btn btn-whats" href="https://wa.me/5599999999999">CHAMAR NO WHATSAPP</a>
     </div>
 
     <div class="card">
       <img src="https://i.ibb.co/21q3fz9y/IMG-20260205-WA0117.jpg">
       <h3>Martino Gravitino</h3>
+      <a class="btn btn-whats" href="https://wa.me/5599999999999">CHAMAR NO WHATSAPP</a>
     </div>
 
     <div class="card">
       <img src="https://i.ibb.co/Wpss0XWF/IMG-20260205-WA0118.jpg">
       <h3>Bulbito Bandido Traktorito</h3>
+      <a class="btn btn-whats" href="https://wa.me/5599999999999">CHAMAR NO WHATSAPP</a>
     </div>
   </div>
 </section>
 
-<!-- CONTA FF -->
 <section class="section">
   <h2>🔥 Conta Free Fire</h2>
-
   <div class="grid">
     <div class="card">
       <img src="https://i.ibb.co/JR8zhH1T/Screenshot-20260205-230107-Free-Fire-2.jpg">
       <h3>Conta FF • LVL 62</h3>
+      <a class="btn btn-whats" href="https://wa.me/5599999999999">CHAMAR NO WHATSAPP</a>
     </div>
   </div>
 </section>
 
-<!-- SCRIPT -->
 <section class="section">
   <h2>💻 Script Fuja do Tsunami</h2>
-
   <div class="grid">
     <div class="card">
       <img src="https://i.ibb.co/FLnBqwG5/file-000000007754720e973d837f59b05e97-2.png">
-      <h3>Duplica Brainrot</h3>
+      <h3>Duplica Brainrot • Atualizado</h3>
+      <a class="btn btn-whats" href="https://wa.me/5599999999999">CHAMAR NO WHATSAPP</a>
     </div>
   </div>
 </section>
 
-<a class="whatsapp-float" href="https://wa.me/5599999999999" target="_blank">
-  WhatsApp
-</a>
+<a class="whatsapp-float" href="https://wa.me/5599999999999">WhatsApp</a>
 
 <footer>
-  © RUAN MODSZ • Todos os direitos reservados
+© RUAN MODSZ • Loja Oficial
 </footer>
 
 </body>
