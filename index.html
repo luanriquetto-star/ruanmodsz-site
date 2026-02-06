@@ -3,85 +3,117 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RUAN MODS - Estoque Limitado</title>
+<title>RUAN MODSZ • Loja Oficial</title>
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
-body{background:#050505;color:#fff}
 
+body{
+  background:linear-gradient(180deg,#000,#120018,#000);
+  color:#fff;
+}
+
+/* HEADER */
 header{
   padding:20px;
-  background:linear-gradient(90deg,#000,#0a0a0a);
-  border-bottom:1px solid #222;
+  text-align:center;
+  background:rgba(0,0,0,.6);
+  border-bottom:1px solid #3a005f;
 }
 header h1{
-  color:#00ff88;
-  text-align:center;
-  font-size:26px;
+  color:#b266ff;
   letter-spacing:2px;
+  font-size:26px;
 }
 
+/* HERO */
 .hero{
+  padding:50px 20px;
   text-align:center;
-  padding:30px 20px;
 }
-.hero h2{font-size:26px}
-.hero span{color:#ff3c3c}
-.hero p{opacity:.8;margin-top:10px}
+.hero .tag{
+  display:inline-block;
+  padding:8px 18px;
+  border-radius:20px;
+  background:#2ecc71;
+  color:#000;
+  font-weight:bold;
+  margin-bottom:20px;
+}
+.hero h2{
+  font-size:32px;
+  margin-bottom:15px;
+}
+.hero span{color:#b266ff}
+.hero p{
+  opacity:.8;
+  margin-bottom:25px;
+}
 
+.btn{
+  display:block;
+  width:90%;
+  max-width:420px;
+  margin:12px auto;
+  padding:16px;
+  border-radius:14px;
+  text-decoration:none;
+  font-weight:bold;
+  text-align:center;
+}
+
+.btn-produtos{
+  background:#b266ff;
+  color:#000;
+}
+.btn-whatsapp{
+  background:#25D366;
+  color:#fff;
+}
+
+/* PRODUTOS */
 .produtos{
-  padding:20px;
+  padding:30px 20px;
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:20px;
+  gap:25px;
 }
 
 .card{
-  background:linear-gradient(180deg,#0c0c0c,#050505);
-  border-radius:16px;
-  padding:18px;
-  box-shadow:0 0 20px rgba(0,0,0,.6);
-  text-align:center;
+  background:linear-gradient(180deg,#0b0014,#050008);
+  border-radius:18px;
+  padding:20px;
+  box-shadow:0 0 25px rgba(178,102,255,.25);
 }
 
 .card img{
   width:100%;
-  height:220px;
-  object-fit:cover;
-  border-radius:12px;
-  margin-bottom:12px;
+  border-radius:14px;
+  margin-bottom:15px;
 }
 
-.tag{
+.tag-estoque{
   display:inline-block;
+  background:#ff3c3c;
   padding:6px 14px;
   border-radius:20px;
   font-size:12px;
   margin-bottom:10px;
-  background:#ff3c3c;
 }
 
-.card h3{margin:10px 0}
-
-.btn-whatsapp{
-  display:block;
-  margin-top:12px;
-  padding:14px;
-  background:#25D366;
-  color:#fff;
-  text-decoration:none;
-  font-weight:bold;
-  border-radius:12px;
+.card h3{
+  margin:10px 0 15px;
+  font-size:20px;
 }
 
+/* FOOTER */
 footer{
   text-align:center;
-  padding:25px;
+  padding:30px;
   opacity:.6;
   font-size:14px;
 }
 
-/* WhatsApp flutuante */
+/* WHATSAPP FLOAT */
 .whatsapp-float{
   position:fixed;
   bottom:20px;
@@ -103,56 +135,65 @@ footer{
 <body>
 
 <header>
-  <h1>🔥 RUAN MODS 🔥</h1>
+  <h1>🔥 RUAN MODSZ 🔥</h1>
 </header>
 
 <section class="hero">
-  <h2>ESTOQUE <span>LIMITADO</span></h2>
-  <p>Itens raros • Atendimento imediato via WhatsApp</p>
+  <div class="tag">🟢 LOJA ONLINE 24H</div>
+  <h2>FUJA DO TSUNAMI<br><span>Brainrots Divinos</span></h2>
+  <p>Itens rápidos • Confiáveis • Entrega garantida</p>
+
+  <a href="#produtos" class="btn btn-produtos">⚡ VER PRODUTOS</a>
+  <a href="https://wa.me/5516993938821" class="btn btn-whatsapp">💬 FALAR CONOSCO</a>
 </section>
 
-<section class="produtos">
+<section class="produtos" id="produtos">
 
+  <!-- Burgerine Bearini -->
   <div class="card">
-    <span class="tag">ESTOQUE LIMITADO</span>
-    <img src="https://i.ibb.co/Tx7YysG4/IMG-20260205-WA0115.jpg" alt="Burgerine Bearini">
+    <span class="tag-estoque">ESTOQUE LIMITADO</span>
+    <img src="https://i.ibb.co/XZPkpCf7/IMG-20260205-WA0116.jpg">
     <h3>Burgerine Bearini 🍔🐻</h3>
-    <a class="btn-whatsapp"
-       href="https://wa.me/5516993938821?text=Olá! Tenho interesse no Burgerine Bearini."
+    <a class="btn btn-whatsapp"
+       href="https://wa.me/5516993938821?text=Quero o Burgerine Bearini"
        target="_blank">CHAMAR NO WHATSAPP</a>
   </div>
 
+  <!-- Grapelino D’oro -->
   <div class="card">
-    <span class="tag">ESTOQUE LIMITADO</span>
-    <img src="https://i.ibb.co/XZPkpCf7/IMG-20260205-WA0116.jpg" alt="Grappelino D’oro">
-    <h3>Grappelino D’oro 🍇🛸</h3>
-    <a class="btn-whatsapp"
-       href="https://wa.me/5516993938821?text=Olá! Tenho interesse no Grappelino D’oro."
+    <span class="tag-estoque">ESTOQUE LIMITADO</span>
+    <img src="https://i.ibb.co/Wpss0XWF/IMG-20260205-WA0118.jpg">
+    <h3>Grapelino D’oro 🍇🛸</h3>
+    <a class="btn btn-whatsapp"
+       href="https://wa.me/5516993938821?text=Quero o Grapelino D’oro"
        target="_blank">CHAMAR NO WHATSAPP</a>
   </div>
 
+  <!-- Martino Gravitino -->
   <div class="card">
-    <span class="tag">ESTOQUE LIMITADO</span>
-    <img src="https://i.ibb.co/21q3fz9y/IMG-20260205-WA0117.jpg" alt="Martino Gravitino">
-    <h3>Martino Gravitino 🛸🧠</h3>
-    <a class="btn-whatsapp"
-       href="https://wa.me/5516993938821?text=Olá! Tenho interesse no Martino Gravitino."
+    <span class="tag-estoque">ESTOQUE LIMITADO</span>
+    <img src="https://i.ibb.co/21q3fz9y/IMG-20260205-WA0117.jpg">
+    <h3>Martino Gravitino 🌀</h3>
+    <a class="btn btn-whatsapp"
+       href="https://wa.me/5516993938821?text=Quero o Martino Gravitino"
        target="_blank">CHAMAR NO WHATSAPP</a>
   </div>
 
+  <!-- Bulbito Bandido Traktorito -->
   <div class="card">
-    <span class="tag">ESTOQUE LIMITADO</span>
-    <img src="https://i.ibb.co/Wpss0XWF/IMG-20260205-WA0118.jpg" alt="Bulbito Bandido Traktorito">
-    <h3>Bulbito Bandido Traktorito 🚜🌱</h3>
-    <a class="btn-whatsapp"
-       href="https://wa.me/5516993938821?text=Olá! Tenho interesse no Bulbito Bandido Traktorito."
+    <span class="tag-estoque">ESTOQUE LIMITADO</span>
+    <img src="https://i.ibb.co/Tx7YysG4/IMG-20260205-WA0115.jpg">
+    <h3>Bulbito Bandido Traktorito 🚜</h3>
+    <a class="btn btn-whatsapp"
+       href="https://wa.me/5516993938821?text=Quero o Bulbito Bandido Traktorito"
        target="_blank">CHAMAR NO WHATSAPP</a>
   </div>
 
 </section>
 
 <footer>
-© RUAN MODS • Atendimento via WhatsApp
+  © RUAN MODSZ • Fuja do Tsunami<br>
+  Atendimento via WhatsApp • Entrega Garantida
 </footer>
 
 <a href="https://wa.me/5516993938821" class="whatsapp-float" target="_blank">
