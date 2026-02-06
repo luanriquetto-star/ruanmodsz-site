@@ -2,309 +2,118 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
+<title>Venda Automática PIX</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RUAN STORE</title>
 
 <style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family: Arial, Helvetica, sans-serif;
+body {
+    font-family: Arial, sans-serif;
+    background: #0f0f0f;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
-
-/* ===== GERAL ===== */
-body{
-  background:#0b0014;
-  color:#fff;
+.box {
+    background: #1c1c1c;
+    padding: 20px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 380px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0,255,0,0.3);
 }
-
-/* ===== HEADER / ENTRADA ===== */
-.header{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:18px 20px;
+h1 {
+    color: #00ff88;
 }
-
-.logo{
-  font-size:22px;
-  font-weight:900;
+button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 12px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    background: #ffaa00;
+    color: #000;
 }
-
-.logo span{
-  color:#f5c400;
+.pix {
+    background: #111;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 15px;
+    word-break: break-all;
+    font-size: 14px;
 }
-
-.menu{
-  width:44px;
-  height:44px;
-  border-radius:12px;
-  background:linear-gradient(180deg,#2a2a2a,#111);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:#f5c400;
-  font-size:22px;
-}
-
-.hero{
-  padding:35px 20px 45px;
-  text-align:center;
-}
-
-.badge{
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  padding:8px 18px;
-  border-radius:30px;
-  background:rgba(245,196,0,0.15);
-  color:#f5c400;
-  font-weight:bold;
-  margin-bottom:18px;
-}
-
-.badge::before{
-  content:"●";
-  color:#1fd35f;
-}
-
-.hero h2{
-  font-size:14px;
-  letter-spacing:2px;
-  color:#f5c400;
-  margin-bottom:8px;
-}
-
-.hero h1{
-  font-size:32px;
-  line-height:1.2;
-  margin-bottom:16px;
-}
-
-.hero h1 .yellow{
-  color:#f5c400;
-}
-
-.hero p{
-  font-size:15px;
-  color:#bdbdbd;
-  margin-bottom:28px;
-  line-height:1.5;
-}
-
-.hero-btn{
-  width:100%;
-  max-width:340px;
-  margin:10px auto;
-  padding:17px;
-  border-radius:14px;
-  font-size:16px;
-  font-weight:bold;
-  text-decoration:none;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:10px;
-}
-
-.btn-produtos{
-  background:#f5c400;
-  color:#000;
-}
-
-.btn-whats{
-  background:#1fd35f;
-  color:#fff;
-}
-
-.infos{
-  display:flex;
-  justify-content:center;
-  gap:22px;
-  margin-top:26px;
-  font-size:13px;
-  color:#cfcfcf;
-  flex-wrap:wrap;
-}
-
-/* ===== PEDIDOS ===== */
-#produtos{
-  padding:20px;
-}
-
-#produtos h1{
-  text-align:center;
-  color:#c77dff;
-  margin-bottom:10px;
-}
-
-#produtos p{
-  text-align:center;
-  color:#d8c7ff;
-  margin-bottom:25px;
-  font-size:14px;
-}
-
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(160px,1fr));
-  gap:16px;
-}
-
-.card{
-  background:linear-gradient(180deg,#2a003d,#12001f);
-  border-radius:18px;
-  padding:12px;
-  text-align:center;
-  box-shadow:0 0 25px rgba(170,0,255,0.35);
-}
-
-.card img{
-  width:100%;
-  border-radius:14px;
-  margin-bottom:8px;
-}
-
-.card h3{
-  font-size:15px;
-  margin-bottom:4px;
-}
-
-.card span{
-  font-size:13px;
-  color:#a6ffcb;
-  font-weight:bold;
-}
-
-.card .btn{
-  display:block;
-  margin-top:10px;
-  background:#1fd35f;
-  color:#000;
-  padding:9px;
-  border-radius:25px;
-  text-decoration:none;
-  font-weight:bold;
-}
-
-.footer{
-  margin:30px 0 15px;
-  text-align:center;
-  font-size:12px;
-  color:#b9a6ff;
-}
-
-/* ===== WHATSAPP FLOAT ===== */
-.whatsapp-float{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  width:56px;
-  height:56px;
-  background:#1fd35f;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:26px;
-  color:#fff;
-  text-decoration:none;
-  box-shadow:0 0 20px rgba(31,211,95,0.6);
+img {
+    margin-top: 15px;
+    width: 200px;
+    background: #fff;
+    padding: 8px;
+    border-radius: 10px;
 }
 </style>
 </head>
 
 <body>
 
-<!-- ===== ENTRADA ===== -->
-<div class="header">
-  <div class="logo"><span>RUAN</span> STORE</div>
-  <div class="menu">☰</div>
+<div class="box">
+    <h1>Sistema de Venda</h1>
+    <p>Pedido → Pagamento → Entrega</p>
+
+    <!-- BOTÃO DE PEDIDO -->
+    <button onclick="criarPedido()">
+        Criar pedido teste (R$ 0,10)
+    </button>
+
+    <div id="resultado"></div>
 </div>
 
-<section class="hero">
-  <div class="badge">LOJA ONLINE 24H</div>
+<script>
+// ===== CONFIGURAÇÕES =====
+const chavePix = "adbe80ca-0439-4b2e-8968-eeb8d8381270";
+const whatsapp = "5516993938821";
 
-  <h2>RIO RISE PERFUMES</h2>
+function criarPedido() {
+    const produto = "Pedido de Teste";
+    const valor = "0.10";
+    const pedidoID = "PED" + Math.floor(Math.random() * 1000000);
 
-  <h1>
-    Perfumes Originais,<br>
-    <span class="yellow">Importados</span> e com<br>
-    <span class="yellow">Entrega Garantida</span>
-  </h1>
+    const mensagemWhats =
+        "Olá! Já fiz o pagamento via PIX.%0A%0A" +
+        "ID do Pedido: " + pedidoID + "%0A" +
+        "Produto: " + produto + "%0A" +
+        "Valor: R$ " + valor + "%0A%0A" +
+        "Segue o comprovante para liberar a entrega.";
 
-  <p>
-    Compra simples, envio rápido e suporte direto no WhatsApp.
-    A loja ideal para quem busca perfumes de qualidade.
-  </p>
+    const linkWhats = "https://wa.me/" + whatsapp + "?text=" + mensagemWhats;
 
-  <a href="#produtos" class="hero-btn btn-produtos">🛍️ VER PRODUTOS</a>
-  <a href="https://wa.me/5516993938821" class="hero-btn btn-whats">💬 FALAR CONOSCO</a>
+    const qrPix =
+        "https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=" +
+        encodeURIComponent(chavePix);
 
-  <div class="infos">
-    <div>🛡️ Compra Segura</div>
-    <div>🚚 Envio Rápido</div>
-    <div>⭐ Clientes Satisfeitos</div>
-  </div>
-</section>
+    // MOSTRA O PIX
+    document.getElementById("resultado").innerHTML = `
+        <div class="pix">
+            <strong>ID do Pedido:</strong> ${pedidoID}<br>
+            <strong>Produto:</strong> ${produto}<br>
+            <strong>Valor:</strong> R$ ${valor}<br><br>
+            <strong>Chave PIX:</strong><br>${chavePix}
+        </div>
 
-<!-- ===== PEDIDOS ===== -->
-<section id="produtos">
-  <h1>RUAN MODSZ STORE</h1>
-  <p>1k = R$0,50 • Entrega rápida • Suporte via WhatsApp</p>
+        <img src="${qrPix}" alt="QR Code PIX">
+        <p>Aguarde… você será redirecionado automaticamente.</p>
+    `;
 
-  <div class="grid">
-    <div class="card">
-      <img src="https://i.imgur.com/4M7IWwP.png">
-      <h3>5k</h3>
-      <span>R$ 2,50</span>
-      <a class="btn" href="https://wa.me/5516993938821?text=Quero%205k">Comprar</a>
-    </div>
-
-    <div class="card">
-      <img src="https://i.imgur.com/4M7IWwP.png">
-      <h3>10k</h3>
-      <span>R$ 5,00</span>
-      <a class="btn" href="https://wa.me/5516993938821?text=Quero%2010k">Comprar</a>
-    </div>
-
-    <div class="card">
-      <img src="https://i.imgur.com/4M7IWwP.png">
-      <h3>20k</h3>
-      <span>R$ 10,00</span>
-      <a class="btn" href="https://wa.me/5516993938821?text=Quero%2020k">Comprar</a>
-    </div>
-
-    <div class="card">
-      <img src="https://i.imgur.com/4M7IWwP.png">
-      <h3>50k</h3>
-      <span>R$ 25,00</span>
-      <a class="btn" href="https://wa.me/5516993938821?text=Quero%2050k">Comprar</a>
-    </div>
-
-    <div class="card">
-      <img src="https://i.imgur.com/4M7IWwP.png">
-      <h3>100k</h3>
-      <span>R$ 50,00</span>
-      <a class="btn" href="https://wa.me/5516993938821?text=Quero%20100k">Comprar</a>
-    </div>
-
-    <div class="card">
-      <img src="https://i.imgur.com/4M7IWwP.png">
-      <h3>240k</h3>
-      <span>R$ 120,00</span>
-      <a class="btn" href="https://wa.me/5516993938821?text=Quero%20240k">Comprar</a>
-    </div>
-  </div>
-
-  <div class="footer">
-    © RUAN STORE — Loja Oficial
-  </div>
-</section>
-
-<a href="https://wa.me/5516993938821" class="whatsapp-float">💬</a>
+    // REDIRECIONAMENTO AUTOMÁTICO PRO WHATSAPP
+    setTimeout(function() {
+        window.location.href = linkWhats;
+    }, 5000); // 5 segundos
+}
+</script>
 
 </body>
 </html>
