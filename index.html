@@ -1,202 +1,133 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!DOCTYPE html><html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RUAN MODSZ • Loja Oficial</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RUAN MODSZ • Loja Oficial</title>  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, Helvetica, sans-serif; }
 
-<style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+    body {
+      background: radial-gradient(circle at top, #2b0040, #000000 70%);
+      color: #ffffff;
+      min-height: 100vh;
+    }
 
-body{
-  background:linear-gradient(180deg,#000,#120018,#000);
-  color:#fff;
-}
+    header {
+      padding: 20px;
+      text-align: center;
+      font-size: 26px;
+      font-weight: bold;
+      color: #c77dff;
+      text-shadow: 0 0 10px #7b2cbf;
+    }
 
-/* HEADER */
-header{
-  padding:20px;
-  text-align:center;
-  background:rgba(0,0,0,.8);
-  border-bottom:1px solid #4b0070;
-}
-header h1{
-  color:#b84dff;
-  letter-spacing:2px;
-}
+    .container {
+      max-width: 420px;
+      margin: auto;
+      padding: 15px;
+    }
 
-/* HERO */
-.hero{
-  text-align:center;
-  padding:40px 20px;
-}
-.hero h2{
-  font-size:26px;
-}
-.hero span{
-  color:#b84dff;
-}
-.hero p{
-  opacity:.8;
-  margin-top:10px;
-}
+    .card {
+      background: linear-gradient(180deg, #12001f, #000000);
+      border-radius: 18px;
+      padding: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 25px rgba(128,0,255,0.25);
+    }
 
-/* PRODUTOS */
-.produtos{
-  padding:20px;
-  display:grid;
-  gap:20px;
-}
+    .badge {
+      display: inline-block;
+      background: linear-gradient(90deg, #9d4edd, #5a189a);
+      padding: 5px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
 
-.card{
-  background:linear-gradient(180deg,#0b0012,#000);
-  border:1px solid #3a005f;
-  border-radius:18px;
-  padding:18px;
-  box-shadow:0 0 25px rgba(186,85,255,.2);
-}
+    .card img {
+      width: 100%;
+      border-radius: 14px;
+      margin: 12px 0;
+    }
 
-.card img{
-  width:100%;
-  border-radius:14px;
-  margin-bottom:12px;
-}
+    .title {
+      font-size: 20px;
+      font-weight: bold;
+    }
 
-.tag{
-  display:inline-block;
-  padding:6px 14px;
-  border-radius:20px;
-  font-size:12px;
-  background:#b84dff;
-  color:#000;
-  font-weight:bold;
-}
+    .subtitle {
+      color: #c77dff;
+      margin-top: 4px;
+      font-size: 14px;
+    }
 
-.card h3{
-  margin:10px 0 4px;
-}
+    .btn {
+      display: block;
+      margin-top: 15px;
+      padding: 14px;
+      text-align: center;
+      background: #25d366;
+      color: #000000;
+      border-radius: 14px;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 0 15px rgba(37,211,102,0.6);
+    }
 
-.divino{
-  font-size:14px;
-  color:#d7a8ff;
-  font-weight:bold;
-  margin-bottom:12px;
-}
+    .btn:hover {
+      opacity: 0.9;
+    }
 
-/* BOTÃO */
-.btn-whatsapp{
-  display:block;
-  width:100%;
-  padding:14px;
-  text-align:center;
-  border-radius:12px;
-  background:#25D366;
-  color:#fff;
-  font-weight:bold;
-  text-decoration:none;
-}
+    footer {
+      text-align: center;
+      font-size: 12px;
+      color: #aaa;
+      margin: 30px 0 15px;
+    }
 
-/* FOOTER */
-footer{
-  text-align:center;
-  padding:30px;
-  font-size:14px;
-  opacity:.6;
-}
+    .whatsapp-float {
+      position: fixed;
+      bottom: 18px;
+      right: 18px;
+      width: 60px;
+      height: 60px;
+      background: #25d366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 20px rgba(37,211,102,0.7);
+    }
 
-/* WHATSAPP FLOAT */
-.whatsapp-float{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  width:60px;
-  height:60px;
-  background:#25D366;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  box-shadow:0 0 20px #25D366;
-  z-index:9999;
-}
-.whatsapp-float img{width:35px}
-</style>
-</head>
+    .whatsapp-float img {
+      width: 34px;
+    }
+  </style></head>
+<body>  <header>@RUAN MODSZ</header>  <div class="container"><!-- CONTA FREE FIRE -->
+<div class="card">
+  <div class="badge">🔥 CONTA</div>
+  <div class="title">Conta Free Fire</div>
+  <div class="subtitle">LVL 62 • Conta Original</div>
 
-<body>
+  <img src="https://i.ibb.co/JR8zhH1T/Screenshot-20260205-230107-Free-Fire-2.jpg" alt="Conta Free Fire LVL 62">
 
-<header>
-  <h1>RUAN MODSZ</h1>
-</header>
+  <a class="btn" href="https://wa.me/5516993938821" target="_blank">CHAMAR NO WHATSAPP</a>
+</div>
 
-<section class="hero">
-  <h2>🔥 Brainrots Divinos & Produtos Premium<br><span>FUJA DO TSUNAMI</span></h2>
-  <p>Estoque limitado • Entrega rápida • Suporte via WhatsApp</p>
-</section>
+<!-- SCRIPT FUJA DO TSUNAMI -->
+<div class="card">
+  <div class="badge">EXCLUSIVO</div>
+  <div class="title">Script Fuja do Tsunami 💻</div>
+  <div class="subtitle">Duplica Brainrot • Atualizado</div>
 
-<section class="produtos">
+  <img src="https://i.ibb.co/FLnBqwG5/file-000000007754720e973d837f59b05e97-2.png" alt="Script Fuja do Tsunami">
 
-  <!-- BRAINROTS -->
-  <div class="card">
-    <span class="tag">ESTOQUE LIMITADO</span>
-    <img src="https://i.ibb.co/Tx7YysG4/IMG-20260205-WA0115.jpg">
-    <h3>Burgerine Bearini 🍔🐻</h3>
-    <p class="divino">🧠 Brainrot Divino</p>
-    <a class="btn-whatsapp" href="https://wa.me/5516993938821?text=Quero o Brainrot Divino Burgerine Bearini" target="_blank">CHAMAR NO WHATSAPP</a>
-  </div>
+  <a class="btn" href="https://wa.me/5516993938821" target="_blank">CHAMAR NO WHATSAPP</a>
+</div>
 
-  <div class="card">
-    <span class="tag">ESTOQUE LIMITADO</span>
-    <img src="https://i.ibb.co/XZPkpCf7/IMG-20260205-WA0116.jpg">
-    <h3>Bulbito Bandido Traktorito 🌱🚜</h3>
-    <p class="divino">🧠 Brainrot Divino</p>
-    <a class="btn-whatsapp" href="https://wa.me/5516993938821?text=Quero o Brainrot Divino Bulbito Bandido Traktorito" target="_blank">CHAMAR NO WHATSAPP</a>
-  </div>
-
-  <div class="card">
-    <span class="tag">ESTOQUE LIMITADO</span>
-    <img src="https://i.ibb.co/21q3fz9y/IMG-20260205-WA0117.jpg">
-    <h3>Martino Gravitino 🌀</h3>
-    <p class="divino">🧠 Brainrot Divino</p>
-    <a class="btn-whatsapp" href="https://wa.me/5516993938821?text=Quero o Brainrot Divino Martino Gravitino" target="_blank">CHAMAR NO WHATSAPP</a>
-  </div>
-
-  <div class="card">
-    <span class="tag">ESTOQUE LIMITADO</span>
-    <img src="https://i.ibb.co/Wpss0XWF/IMG-20260205-WA0118.jpg">
-    <h3>Grappelino D’oro 🍇</h3>
-    <p class="divino">🧠 Brainrot Divino</p>
-    <a class="btn-whatsapp" href="https://wa.me/5516993938821?text=Quero o Brainrot Divino Grappelino D’oro" target="_blank">CHAMAR NO WHATSAPP</a>
-  </div>
-
-  <!-- CONTA FF -->
-  <div class="card">
-    <span class="tag">ESTOQUE LIMITADO</span>
-    <img src="https://i.ibb.co/JR8zhH1T/Screenshot-20260205-230107-Free-Fire-2.jpg">
-    <h3>Conta Free Fire 🔥</h3>
-    <p class="divino">LVL 62 • Conta Original</p>
-    <a class="btn-whatsapp" href="https://wa.me/5516993938821?text=Tenho interesse na Conta Free Fire LVL 62" target="_blank">CHAMAR NO WHATSAPP</a>
-  </div>
-
-  <!-- SCRIPT -->
-  <div class="card">
-    <span class="tag">EXCLUSIVO</span>
-    <img src="https://i.ibb.co/9tWZQ2x/script.jpg" alt="Script Duplica Brainrot">
-    <h3>Script Fuja do Tsunami 💻</h3>
-    <p class="divino">Duplica Brainrot • Atualizado</p>
-    <a class="btn-whatsapp" href="https://wa.me/5516993938821?text=Quero o Script Fuja do Tsunami que duplica Brainrot" target="_blank">CHAMAR NO WHATSAPP</a>
-  </div>
-
-</section>
-
-<footer>
-  © RUAN MODSZ • Loja Oficial<br>
-  Atendimento direto pelo WhatsApp
-</footer>
-
-<a href="https://wa.me/5516993938821" class="whatsapp-float" target="_blank">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
-</a>
-
-</body>
+  </div>  <footer>
+    © RUAN MODSZ • Loja Oficial<br>
+    Atendimento direto pelo WhatsApp
+  </footer>  <a class="whatsapp-float" href="https://wa.me/5516993938821" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+  </a></body>
 </html>
