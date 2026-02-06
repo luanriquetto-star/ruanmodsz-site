@@ -17,100 +17,91 @@ body{
 header{
   padding:20px;
   text-align:center;
-  background:rgba(0,0,0,.6);
-  border-bottom:1px solid #3a005f;
+  background:rgba(0,0,0,.8);
+  border-bottom:1px solid #4b0070;
 }
 header h1{
-  color:#b266ff;
+  color:#b84dff;
   letter-spacing:2px;
-  font-size:26px;
 }
 
 /* HERO */
 .hero{
-  padding:50px 20px;
   text-align:center;
-}
-.hero .tag{
-  display:inline-block;
-  padding:8px 18px;
-  border-radius:20px;
-  background:#2ecc71;
-  color:#000;
-  font-weight:bold;
-  margin-bottom:20px;
+  padding:40px 20px;
 }
 .hero h2{
-  font-size:32px;
-  margin-bottom:15px;
+  font-size:26px;
 }
-.hero span{color:#b266ff}
+.hero span{
+  color:#b84dff;
+}
 .hero p{
   opacity:.8;
-  margin-bottom:25px;
-}
-
-.btn{
-  display:block;
-  width:90%;
-  max-width:420px;
-  margin:12px auto;
-  padding:16px;
-  border-radius:14px;
-  text-decoration:none;
-  font-weight:bold;
-  text-align:center;
-}
-
-.btn-produtos{
-  background:#b266ff;
-  color:#000;
-}
-.btn-whatsapp{
-  background:#25D366;
-  color:#fff;
+  margin-top:10px;
 }
 
 /* PRODUTOS */
 .produtos{
-  padding:30px 20px;
+  padding:20px;
   display:grid;
-  gap:25px;
+  gap:20px;
 }
 
 .card{
-  background:linear-gradient(180deg,#0b0014,#050008);
+  background:linear-gradient(180deg,#0b0012,#000);
+  border:1px solid #3a005f;
   border-radius:18px;
-  padding:20px;
-  box-shadow:0 0 25px rgba(178,102,255,.25);
+  padding:18px;
+  box-shadow:0 0 25px rgba(186,85,255,.2);
 }
 
 .card img{
   width:100%;
   border-radius:14px;
-  margin-bottom:15px;
+  margin-bottom:12px;
 }
 
-.tag-estoque{
+.tag{
   display:inline-block;
-  background:#ff3c3c;
   padding:6px 14px;
   border-radius:20px;
   font-size:12px;
-  margin-bottom:10px;
+  background:#b84dff;
+  color:#000;
+  font-weight:bold;
 }
 
 .card h3{
-  margin:10px 0 15px;
-  font-size:20px;
+  margin:10px 0 4px;
+}
+
+.divino{
+  font-size:14px;
+  color:#d7a8ff;
+  font-weight:bold;
+  margin-bottom:12px;
+}
+
+/* BOTÃO */
+.btn-whatsapp{
+  display:block;
+  width:100%;
+  padding:14px;
+  text-align:center;
+  border-radius:12px;
+  background:#25D366;
+  color:#fff;
+  font-weight:bold;
+  text-decoration:none;
 }
 
 /* FOOTER */
 footer{
   text-align:center;
   padding:30px;
-  opacity:.6;
   font-size:14px;
+  opacity:.6;
 }
 
 /* WHATSAPP FLOAT */
@@ -135,65 +126,72 @@ footer{
 <body>
 
 <header>
-  <h1>🔥 RUAN MODSZ 🔥</h1>
+  <h1>RUAN MODSZ</h1>
 </header>
 
 <section class="hero">
-  <div class="tag">🟢 LOJA ONLINE 24H</div>
-  <h2>FUJA DO TSUNAMI<br><span>Brainrots Divinos</span></h2>
-  <p>Itens rápidos • Confiáveis • Entrega garantida</p>
-
-  <a href="#produtos" class="btn btn-produtos">⚡ VER PRODUTOS</a>
-  <a href="https://wa.me/5516993938821" class="btn btn-whatsapp">💬 FALAR CONOSCO</a>
+  <h2>🔥 Brainrots Divinos & Produtos Premium<br><span>FUJA DO TSUNAMI</span></h2>
+  <p>Estoque limitado • Entrega rápida • Suporte via WhatsApp</p>
 </section>
 
-<section class="produtos" id="produtos">
+<section class="produtos">
 
-  <!-- Burgerine Bearini -->
+  <!-- BRAINROTS -->
   <div class="card">
-    <span class="tag-estoque">ESTOQUE LIMITADO</span>
-    <img src="https://i.ibb.co/XZPkpCf7/IMG-20260205-WA0116.jpg">
+    <span class="tag">ESTOQUE LIMITADO</span>
+    <img src="https://i.ibb.co/Tx7YysG4/IMG-20260205-WA0115.jpg">
     <h3>Burgerine Bearini 🍔🐻</h3>
-    <a class="btn btn-whatsapp"
-       href="https://wa.me/5516993938821?text=Quero o Burgerine Bearini"
-       target="_blank">CHAMAR NO WHATSAPP</a>
+    <p class="divino">🧠 Brainrot Divino</p>
+    <a class="btn-whatsapp" href="https://wa.me/5516993938821?text=Quero o Brainrot Divino Burgerine Bearini" target="_blank">CHAMAR NO WHATSAPP</a>
   </div>
 
-  <!-- Grapelino D’oro -->
   <div class="card">
-    <span class="tag-estoque">ESTOQUE LIMITADO</span>
-    <img src="https://i.ibb.co/Wpss0XWF/IMG-20260205-WA0118.jpg">
-    <h3>Grapelino D’oro 🍇🛸</h3>
-    <a class="btn btn-whatsapp"
-       href="https://wa.me/5516993938821?text=Quero o Grapelino D’oro"
-       target="_blank">CHAMAR NO WHATSAPP</a>
+    <span class="tag">ESTOQUE LIMITADO</span>
+    <img src="https://i.ibb.co/XZPkpCf7/IMG-20260205-WA0116.jpg">
+    <h3>Bulbito Bandido Traktorito 🌱🚜</h3>
+    <p class="divino">🧠 Brainrot Divino</p>
+    <a class="btn-whatsapp" href="https://wa.me/5516993938821?text=Quero o Brainrot Divino Bulbito Bandido Traktorito" target="_blank">CHAMAR NO WHATSAPP</a>
   </div>
 
-  <!-- Martino Gravitino -->
   <div class="card">
-    <span class="tag-estoque">ESTOQUE LIMITADO</span>
+    <span class="tag">ESTOQUE LIMITADO</span>
     <img src="https://i.ibb.co/21q3fz9y/IMG-20260205-WA0117.jpg">
     <h3>Martino Gravitino 🌀</h3>
-    <a class="btn btn-whatsapp"
-       href="https://wa.me/5516993938821?text=Quero o Martino Gravitino"
-       target="_blank">CHAMAR NO WHATSAPP</a>
+    <p class="divino">🧠 Brainrot Divino</p>
+    <a class="btn-whatsapp" href="https://wa.me/5516993938821?text=Quero o Brainrot Divino Martino Gravitino" target="_blank">CHAMAR NO WHATSAPP</a>
   </div>
 
-  <!-- Bulbito Bandido Traktorito -->
   <div class="card">
-    <span class="tag-estoque">ESTOQUE LIMITADO</span>
-    <img src="https://i.ibb.co/Tx7YysG4/IMG-20260205-WA0115.jpg">
-    <h3>Bulbito Bandido Traktorito 🚜</h3>
-    <a class="btn btn-whatsapp"
-       href="https://wa.me/5516993938821?text=Quero o Bulbito Bandido Traktorito"
-       target="_blank">CHAMAR NO WHATSAPP</a>
+    <span class="tag">ESTOQUE LIMITADO</span>
+    <img src="https://i.ibb.co/Wpss0XWF/IMG-20260205-WA0118.jpg">
+    <h3>Grappelino D’oro 🍇</h3>
+    <p class="divino">🧠 Brainrot Divino</p>
+    <a class="btn-whatsapp" href="https://wa.me/5516993938821?text=Quero o Brainrot Divino Grappelino D’oro" target="_blank">CHAMAR NO WHATSAPP</a>
+  </div>
+
+  <!-- CONTA FF -->
+  <div class="card">
+    <span class="tag">ESTOQUE LIMITADO</span>
+    <img src="https://i.ibb.co/JR8zhH1T/Screenshot-20260205-230107-Free-Fire-2.jpg">
+    <h3>Conta Free Fire 🔥</h3>
+    <p class="divino">LVL 62 • Conta Original</p>
+    <a class="btn-whatsapp" href="https://wa.me/5516993938821?text=Tenho interesse na Conta Free Fire LVL 62" target="_blank">CHAMAR NO WHATSAPP</a>
+  </div>
+
+  <!-- SCRIPT -->
+  <div class="card">
+    <span class="tag">EXCLUSIVO</span>
+    <img src="https://i.ibb.co/9tWZQ2x/script.jpg" alt="Script Duplica Brainrot">
+    <h3>Script Fuja do Tsunami 💻</h3>
+    <p class="divino">Duplica Brainrot • Atualizado</p>
+    <a class="btn-whatsapp" href="https://wa.me/5516993938821?text=Quero o Script Fuja do Tsunami que duplica Brainrot" target="_blank">CHAMAR NO WHATSAPP</a>
   </div>
 
 </section>
 
 <footer>
-  © RUAN MODSZ • Fuja do Tsunami<br>
-  Atendimento via WhatsApp • Entrega Garantida
+  © RUAN MODSZ • Loja Oficial<br>
+  Atendimento direto pelo WhatsApp
 </footer>
 
 <a href="https://wa.me/5516993938821" class="whatsapp-float" target="_blank">
