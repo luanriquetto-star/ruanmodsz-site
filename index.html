@@ -1,29 +1,182 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>RUAN MODSZ</title>
-  <style>
-    body {
-      margin: 0;
-      background: #0f0f0f;
-      color: #00ff88;
-      font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      text-align: center;
-    }
-    h1 {
-      font-size: 3em;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RUAN MODS - Loja Oficial</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+body{background:#050505;color:#fff}
+
+header{
+  padding:20px;
+  background:linear-gradient(90deg,#000,#0a0a0a);
+  border-bottom:1px solid #222;
+}
+header h1{
+  color:#00ff88;
+  text-align:center;
+  font-size:26px;
+  letter-spacing:2px;
+}
+
+.hero{
+  text-align:center;
+  padding:40px 20px;
+}
+.hero h2{
+  font-size:28px;
+}
+.hero span{color:#ffd000}
+.hero p{
+  opacity:.8;
+  margin-top:10px;
+}
+
+.btn{
+  display:block;
+  margin:15px auto;
+  width:90%;
+  max-width:400px;
+  padding:15px;
+  border-radius:12px;
+  text-align:center;
+  font-weight:bold;
+  text-decoration:none;
+}
+
+.btn-produtos{background:#ffd000;color:#000}
+.btn-whatsapp{background:#25D366;color:#fff}
+
+.produtos{
+  padding:20px;
+  display:grid;
+  gap:20px;
+}
+
+.card{
+  background:linear-gradient(180deg,#0c0c0c,#050505);
+  border-radius:16px;
+  padding:20px;
+  box-shadow:0 0 20px rgba(0,0,0,.6);
+}
+
+.tag{
+  display:inline-block;
+  padding:6px 12px;
+  border-radius:20px;
+  font-size:12px;
+  margin-bottom:10px;
+}
+.estoque{background:#1eff00;color:#000}
+.vendido{background:#9b59ff}
+.promo{background:#ff3c3c}
+
+.card h3{margin:10px 0}
+.preco{
+  font-size:26px;
+  color:#ffd000;
+  margin-bottom:10px;
+}
+
+footer{
+  text-align:center;
+  padding:30px;
+  opacity:.6;
+  font-size:14px;
+}
+
+/* WhatsApp flutuante */
+.whatsapp-float{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  width:60px;
+  height:60px;
+  background:#25D366;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 0 20px #25D366;
+  z-index:9999;
+}
+.whatsapp-float img{width:35px}
+</style>
 </head>
+
 <body>
-  <div>
-    <h1>🔥 RUAN MODSZ 🔥</h1>
-    <p>Site oficial online no Vercel</p>
+
+<header>
+  <h1>🔥 RUAN MODS 🔥</h1>
+</header>
+
+<section class="hero">
+  <h2>FUJA DO TSUNAMI<br><span>Itens Rápidos e Confiáveis</span></h2>
+  <p>Entrega garantida • Compra segura • Atendimento via WhatsApp</p>
+
+  <a href="#produtos" class="btn btn-produtos">VER PRODUTOS</a>
+  <a href="https://wa.me/5516993938821" class="btn btn-whatsapp">FALAR CONOSCO</a>
+</section>
+
+<section class="produtos" id="produtos">
+
+  <div class="card">
+    <span class="tag estoque">EM ESTOQUE</span>
+    <h3>Bulbito LVL Max 🌱</h3>
+    <p class="preco">R$ 2,00</p>
+    <a class="btn btn-whatsapp"
+       href="https://wa.me/5516993938821?text=Olá! Quero comprar o Bulbito LVL Max."
+       target="_blank">COMPRAR NO WHATSAPP</a>
   </div>
+
+  <div class="card">
+    <span class="tag vendido">MAIS VENDIDO</span>
+    <h3>Din Din 💰</h3>
+    <p class="preco">R$ 5,00</p>
+    <a class="btn btn-whatsapp"
+       href="https://wa.me/5516993938821?text=Olá! Quero comprar o Din Din."
+       target="_blank">COMPRAR NO WHATSAPP</a>
+  </div>
+
+  <div class="card">
+    <span class="tag estoque">DISPONÍVEL</span>
+    <h3>Strawberry Elephant 🐘</h3>
+    <p class="preco">R$ 3,25</p>
+    <a class="btn btn-whatsapp"
+       href="https://wa.me/5516993938821?text=Olá! Quero comprar o Strawberry Elephant."
+       target="_blank">COMPRAR NO WHATSAPP</a>
+  </div>
+
+  <div class="card">
+    <span class="tag promo">PROMOÇÃO</span>
+    <h3>Grapelino D’ouro 🍇</h3>
+    <p class="preco">R$ 4,50</p>
+    <a class="btn btn-whatsapp"
+       href="https://wa.me/5516993938821?text=Olá! Quero comprar o Grapelino D’ouro."
+       target="_blank">COMPRAR NO WHATSAPP</a>
+  </div>
+
+  <div class="card">
+    <span class="tag estoque">EM ESTOQUE</span>
+    <h3>Fantasminha / Guest 👻</h3>
+    <p class="preco">R$ 4,00</p>
+    <a class="btn btn-whatsapp"
+       href="https://wa.me/5516993938821?text=Olá! Quero comprar o Fantasminha Guest."
+       target="_blank">COMPRAR NO WHATSAPP</a>
+  </div>
+
+</section>
+
+<footer>
+  © RUAN MODS • Atendimento via WhatsApp<br>
+  Todos os produtos com entrega garantida após pagamento
+</footer>
+
+<a href="https://wa.me/5516993938821" class="whatsapp-float" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+</a>
+
 </body>
 </html>
