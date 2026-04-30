@@ -1,1 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gripe do Rato</title>
 
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #000000, #1a1a1a);
+            color: #fff;
+        }
+
+        .container {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            top: 40%;
+            transform: translateY(-50%);
+        }
+
+        h1 {
+            color: #ff0000;
+            font-size: 45px;
+        }
+
+        p {
+            color: #ccc;
+        }
+
+        /* RATOS */
+        .rato {
+            position: absolute;
+            font-size: 30px;
+            animation: andar linear infinite;
+        }
+
+        @keyframes andar {
+            0% {
+                transform: translateX(-100px);
+            }
+            100% {
+                transform: translateX(110vw);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>GRIPE DO RATO</h1>
+        <p>Esses ratos tão correndo… igual eu correria atrás de você 😏</p>
+    </div>
+
+    <!-- RATOS -->
+    <div class="rato" style="top:10%; animation-duration: 6s;">🐀</div>
+    <div class="rato" style="top:30%; animation-duration: 8s;">🐀</div>
+    <div class="rato" style="top:50%; animation-duration: 5s;">🐀</div>
+    <div class="rato" style="top:70%; animation-duration: 7s;">🐀</div>
+    <div class="rato" style="top:85%; animation-duration: 9s;">🐀</div>
+
+</body>
+</html>"><span>Vida</span><input type="checkbox"></div>
+    </div>
+
+    <div id="misc" class="content">
+        <div class="toggle"><span>Sem Recuo</span><input type="checkbox"></div>
+        <div class="toggle"><span>Velocidade</span><input type="checkbox"></div>
+    </div>
+
+    <div id="config" class="content">
+        <div class="toggle"><span>Salvar Config</span><button>Salvar</button></div>
+        <div class="toggle"><span>Resetar</span><button>Reset</button></div>
+    </div>
+</div>
+
+<script>
+let touchCount = 0;
+
+document.addEventListener("touchstart", () => {
+    touchCount++;
+    if (touchCount === 3) {
+        let menu = document.getElementById("menu");
+        menu.style.display = menu.style.display === "none" ? "block" : "none";
+        touchCount = 0;
+    }
+    setTimeout(() => touchCount = 0, 1000);
+});
+
+function openTab(tab) {
+    let contents = document.querySelectorAll(".content");
+    contents.forEach(c => c.classList.remove("active"));
+    document.getElementById(tab).classList.add("active");
+}
+</script>
+
+</body>
+</html>
