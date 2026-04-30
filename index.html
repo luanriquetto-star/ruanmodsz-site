@@ -1,102 +1,276 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gripe do Rato</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gripe do Rato - Itens Premium</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-    <style>
-        body {
-            margin: 0;
-            overflow: hidden;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #000000, #1a1a1a);
-            color: #fff;
-        }
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: #0a0a0a;
+      color: #e0e0e0;
+      min-height: 100vh;
+    }
 
-        .container {
-            position: relative;
-            z-index: 2;
-            text-align: center;
-            top: 40%;
-            transform: translateY(-50%);
-        }
+    header {
+      background: rgba(10, 10, 10, 0.98);
+      padding: 18px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #222;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
 
-        h1 {
-            color: #ff0000;
-            font-size: 45px;
-        }
+    .logo { font-size: 26px; font-weight: 700; color: #fff; }
+    .logo span { color: #c62828; }
 
-        p {
-            color: #ccc;
-        }
+    .menu-btn {
+      background: #c62828;
+      color: white;
+      border: none;
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
+      font-size: 22px;
+      cursor: pointer;
+    }
 
-        /* RATOS */
-        .rato {
-            position: absolute;
-            font-size: 30px;
-            animation: andar linear infinite;
-        }
+    .badges {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      margin: 20px 0;
+      font-size: 14.5px;
+      color: #aaa;
+    }
 
-        @keyframes andar {
-            0% {
-                transform: translateX(-100px);
-            }
-            100% {
-                transform: translateX(110vw);
-            }
-        }
-    </style>
+    .hero {
+      text-align: center;
+      padding: 50px 20px 40px;
+    }
+
+    .character {
+      width: 170px;
+      height: 170px;
+      margin: 0 auto 25px;
+      background: radial-gradient(circle at 40% 30%, #ff9800, #c62828);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 95px;
+      box-shadow: 0 10px 40px rgba(198, 40, 40, 0.5);
+      border: 5px solid #1f1f1f;
+    }
+
+    .tag {
+      background: #1f1f1f;
+      color: #ffd700;
+      padding: 8px 28px;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 17px;
+      display: inline-block;
+      margin: 15px 0 30px;
+    }
+
+    .section-title {
+      background: #c62828;
+      color: white;
+      padding: 10px 30px;
+      border-radius: 30px;
+      display: inline-block;
+      font-weight: 600;
+      font-size: 15px;
+      letter-spacing: 1px;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-size: 28px;
+      text-align: center;
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+
+    .highlight { color: #ffd700; }
+
+    .description {
+      text-align: center;
+      max-width: 580px;
+      margin: 0 auto 45px;
+      color: #b0b0b0;
+      font-size: 15.5px;
+      padding: 0 20px;
+    }
+
+    .products { padding: 0 20px 40px; }
+
+    .product-card {
+      background: #111111;
+      border: 1px solid #222;
+      border-radius: 16px;
+      padding: 25px 20px;
+      margin-bottom: 25px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      border-color: #c62828;
+    }
+
+    .product-card img {
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
+      margin-bottom: 15px;
+      border-radius: 12px;
+    }
+
+    .product-name {
+      font-size: 19px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+
+    .price {
+      font-size: 32px;
+      font-weight: 700;
+      color: #ffd700;
+      margin-bottom: 18px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 4px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .badge.mais-vendido {
+      background: #c62828;
+      color: white;
+    }
+
+    .whatsapp-btn {
+      background: #00c853;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 15.5px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      width: 100%;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .main-buttons {
+      padding: 0 20px 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .btn {
+      padding: 16px;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 16px;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .btn-yellow { background: #ffd700; color: #000; }
+    .btn-red { background: #c62828; color: white; }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: #666;
+      font-size: 14px;
+      border-top: 1px solid #222;
+    }
+  </style>
 </head>
-
 <body>
 
-    <div class="container">
-        <h1>GRIPE DO RATO</h1>
-        <p>Esses ratos tão correndo… igual eu correria atrás de você 😏</p>
+  <header>
+    <div class="logo">GRIPE <span>DO RATO</span></div>
+    <button class="menu-btn">☰</button>
+  </header>
+
+  <div class="badges">
+    <div>🔒 Compra Segura</div>
+    <div>⚡ Entrega Rápida</div>
+  </div>
+
+  <div class="hero">
+    <div class="character">🐀</div>
+    <div class="tag">GRIPE DO RATO</div>
+  </div>
+
+  <div style="text-align: center;">
+    <div class="section-title">ITENS DISPONÍVEIS</div>
+  </div>
+
+  <h1>Escolha seu <span class="highlight">Item Favorito</span></h1>
+
+  <p class="description">
+    Itens premium para o jogo <strong>GRIPE DO RATO</strong>.<br>
+    Entrega imediata após confirmação do pagamento.
+  </p>
+
+  <!-- Produtos -->
+  <div class="products">
+
+    <!-- GRIPE DO RATO -->
+    <div class="product-card">
+      <div class="badge mais-vendido">MAIS VENDIDO</div>
+      <img src="https://photos.google.com/share/AF1QipN_wDwF6GzOiwGBCp6Aha1oPPCHYEoY_tpvKnE53WE4-ozdhYC62ZWiRMgl7L2CdA/photo/AF1QipNZsAtHSX8Yq6h1Tk2MM_oC7G-vmypo3tpG_dMQ?key=cEVLQloxVmlWRGV0M3dpUmw4YVFNT1pHcmlJT0JB" alt="Gripe do Rato">
+      <div class="product-name">GRIPE DO RATO</div>
+      <div class="price">R$ 0,99</div>
+      <a href="https://wa.me/5516997438577" target="_blank" class="whatsapp-btn">
+        Comprar no WhatsApp
+      </a>
     </div>
 
-    <!-- RATOS -->
-    <div class="rato" style="top:10%; animation-duration: 6s;">🐀</div>
-    <div class="rato" style="top:30%; animation-duration: 8s;">🐀</div>
-    <div class="rato" style="top:50%; animation-duration: 5s;">🐀</div>
-    <div class="rato" style="top:70%; animation-duration: 7s;">🐀</div>
-    <div class="rato" style="top:85%; animation-duration: 9s;">🐀</div>
-
-</body>
-</html>"><span>Vida</span><input type="checkbox"></div>
+    <!-- VENENO DO RATO -->
+    <div class="product-card">
+      <div class="badge" style="background:#1f1f1f; color:#aaa;">DISPONÍVEL AGORA</div>
+      <img src="https://via.placeholder.com/120x120/ef5350/111?text=VENENO+DO+RATO" alt="Veneno do Rato">
+      <div class="product-name">VENENO DO RATO</div>
+      <div class="price">R$ 1,99</div>
+      <a href="https://wa.me/5516997438577" target="_blank" class="whatsapp-btn">
+        Comprar no WhatsApp
+      </a>
     </div>
 
-    <div id="misc" class="content">
-        <div class="toggle"><span>Sem Recuo</span><input type="checkbox"></div>
-        <div class="toggle"><span>Velocidade</span><input type="checkbox"></div>
-    </div>
+  </div>
 
-    <div id="config" class="content">
-        <div class="toggle"><span>Salvar Config</span><button>Salvar</button></div>
-        <div class="toggle"><span>Resetar</span><button>Reset</button></div>
-    </div>
-</div>
+  <div class="main-buttons">
+    <a href="#" class="btn btn-yellow">VER TODOS OS ITENS</a>
+    <a href="https://wa.me/5516997438577" target="_blank" class="btn btn-red">
+      FALAR COM SUPORTE NO WHATSAPP
+    </a>
+  </div>
 
-<script>
-let touchCount = 0;
-
-document.addEventListener("touchstart", () => {
-    touchCount++;
-    if (touchCount === 3) {
-        let menu = document.getElementById("menu");
-        menu.style.display = menu.style.display === "none" ? "block" : "none";
-        touchCount = 0;
-    }
-    setTimeout(() => touchCount = 0, 1000);
-});
-
-function openTab(tab) {
-    let contents = document.querySelectorAll(".content");
-    contents.forEach(c => c.classList.remove("active"));
-    document.getElementById(tab).classList.add("active");
-}
-</script>
+  <footer>
+    <p>🔒 Compra 100% Segura • ⚡ Entrega Instantânea • Suporte Rápido</p>
+  </footer>
 
 </body>
 </html>
